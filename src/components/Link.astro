@@ -1,0 +1,11 @@
+---
+const {href, text, clss} = Astro.props;
+---
+<style>
+  a {
+    color: royalblue;
+    text-decoration: none;
+  }
+</style>
+
+<b><a class={clss} href={href}>{text}</a></b>

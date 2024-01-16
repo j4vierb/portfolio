@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'About me';
+
+const identity = {
+  firstName: "Javier B.",
+  country: "Colombia [🇨🇴]",
+  occupation: "Student at Universidad de los Andes",
+  hobbies: ["Math", "Running", "Coding"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Java", "Spring Boot", "Bootstrap", "MongoDB", "Oracle SQL"];
+
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>General information</h2>
+  <p><b>Name:</b> {identity.firstName}</p>
+  <p><b>Country:</b> {identity.country}</p>
+  <p><b>Occupation:</b> {identity.occupation}</p>
+  <p><b>Hobbies:</b></p>
+  <ul>
+    {identity.hobbies.map((hobbie) => {
+      return <li>{hobbie}</li>
+    })}
+  </ul>
+
+  <h2>Skills</h2>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+
+  <h2>Goals to 2024 ✨✨</h2>
+  <p>My goal is to finish in 3 hours. 🅾</p>
+</BaseLayout>

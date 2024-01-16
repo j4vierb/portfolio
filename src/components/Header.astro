@@ -1,0 +1,25 @@
+---
+import Navigation from './Navigation.astro'
+import Hamburger from './Hamburger.astro'
+
+const { pageTitle } = Astro.props;
+---
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    line-height: 40px;
+    cursor: default;
+  }
+</style>
+
+<header>
+  <h1>{pageTitle}</h1>
+  <Hamburger />
+  <Navigation />
+</header>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const pageTitle = 'Blog';
+const allPosts = await Astro.glob('./posts/*.md');
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Entries</h2>
+  <p>Here you will found the link to the blog entries.</p>
+  <ul>
+    {allPosts.map((post) => {
+        return <BlogPost url={post.url} title={post.frontmatter.title} />
+      })
+    }
+  </ul>
+</BaseLayout>
