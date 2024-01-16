@@ -2,5 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://j4vierb.github.io/'
+  site: 'https://j4vierb.github.io/',
+  base: '/'
 });
