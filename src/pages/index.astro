@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Greating } from '../components/Greating';
+
 const pageTitle = 'Home';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>
-    SD based on Colombia.
-  </p>
+  <p>SD based on Colombia.</p>
+  <Greating client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 </BaseLayout>
