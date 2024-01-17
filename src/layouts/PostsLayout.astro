@@ -1,12 +1,31 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-const {frontmatter} = Astro.props;
-
+const { frontmatter } = Astro.props;
+const tags = frontmatter?.tags;
 const pageTitle = "Posts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <slot />
+  <h2>Tags</h2>
+  <div class="tags">
+    {tags.map((tag) => {
+      return <span class="tag">{tag}</span>
+    })}
+  </div>
 </BaseLayout>
+
+<style>
+  .tags {
+    display: flex;
+    justify-content: center;
+  }
+  .tag {
+    background-color: rgb(224, 221, 221);
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 40px;
+  }
+</style>
 
