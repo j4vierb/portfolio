@@ -1,7 +1,4 @@
 # Portfolio
 
-## TO DO
+This Astro project will be used as my personal portfolio. Here you will find some information about me, my interests, what i'm doing, link to my university and personal projects. Additionally, I want to write some blog entries about topics related to competitive programming problems, data structures and machine learning.
 
-1. Explore JS Frameworks in Astro
-2. Fix the hamburguer menu
-3. Fix dark theme
