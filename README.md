@@ -1,12 +1,9 @@
-# Introduction
+# Portfolio
 
-This Astro project will be used as my personal portfolio. Here you will find some information about me, my interests, what i'm doing, link to my university and personal projects.
+## Introduction
 
-Additionally, I want to write some blog entries about topics related to competitive programming problems, data structures and machine learning.
+This Astro project will be used as my personal portfolio. Here you will find some information about me, my interests, what i'm doing, and personal projects. In particular, I want to write some blog entries about topics related to competitive programming problems, data structures, and machine learning to track what I'm learning.
 
-❎ DISCLAIMER: The page isn't working. Problems with the routes. 
+## Status
 
-# Bibliography
-
-1. [https://docs.astro.build/en/tutorial/0-introduction/](https://docs.astro.build/en/tutorial/0-introduction/)
-
+- [ ] DISCLAIMER: The page isn't working. The routes that are defined locally are not working :(. 
