@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = await Astro.glob('../posts/*');
+
+const uniqueTags = [... new Set(allPosts.map((post) => {
+  return post.frontmatter.title
+}).flat())];
+---
+
+<BaseLayout pageTitle="Tags">
+  <h1>Soluciones</h1>
+  <hr />
+  <p>Mi idea es incluir soluciones de algunos problemas de matemática discreta, algoritmos e implementaciones interesantes (a modo de repositorio de conocimiento central).</p>
+
+  <h2>Matemática discreta</h2>
+  <ul>
+    {uniqueTags.map((tag) => {
+      return <li>{tag}</li>
+    })}
+  </ul>
+</BaseLayout>
