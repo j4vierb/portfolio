@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/preact": "3.1.0",
+    "@astrojs/rss": "4.0.10",
     "astro": "4.0.8",
     "preact": "10.19.3"
   }

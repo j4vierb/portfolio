@@ -1,6 +1,6 @@
 ---
-title: 'hola'
-tags: ['x']
+title: 'Software development'
+tags: ['learning in public', 'blogging']
 ---
 # Threads en Java
 

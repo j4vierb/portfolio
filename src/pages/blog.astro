@@ -3,14 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 
 const pageTitle = 'Blog';
-const allPosts = await Astro.glob('./posts/*.md');
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager:  true }));
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>Entries</h2>
   <p>Here you will found the link to the blog entries.</p>
   <ul>
-    {allPosts.map((post) => {
+    {allPosts.map((post: any) => {
         return <BlogPost url={post.url} title={post.frontmatter.title} />
       })
     }

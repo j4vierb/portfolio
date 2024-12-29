@@ -1,17 +1,15 @@
-import { useState } from "preact/hooks";
+import { useState } from 'preact/hooks';
 
-function Greating({ messages }) {
+export default function Greeting({messages}) {
   const randomMessage = () => messages[(Math.floor(Math.random() * messages.length))];
-  const [state, setState] = useState(randomMessage());
-  
+  const [greeting, setGreeting] = useState(messages[0]);
+
   return (
     <div>
-      <h3>Thank you to visit the site! {state}</h3>
-      <button onClick={() => setState(randomMessage())}>
-        change!
+      <h3>{greeting}! Thank you for visiting!</h3>
+      <button onClick={() => setGreeting(randomMessage())}>
+        New Greeting
       </button>
     </div>
-  )
+  );
 }
-
-export { Greating }
