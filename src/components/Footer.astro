@@ -3,18 +3,19 @@ import Link from "./Link.astro"
 ---
 
 <style>
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-  }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
 
-  footer p {
-    font-size: 1.2em;
-  }
+footer p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
 </style>
 
 <footer>
-  <p>Toda esta página fue hecha con <Link href="https://astro.build/" text="Astro" newPage={true}/>.</p>
+  <p>Esta página fue hecha con <Link href="https://astro.build/" text="Astro" newPage={true}/> y el tema de <Link href="https://github.com/catppuccin/catppuccin/" text="Catppuccin" newPage={true}/>.</p>
 </footer>
