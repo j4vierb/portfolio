@@ -1,11 +1,10 @@
 ---
-const {href, text, clss} = Astro.props;
+const {href, text, newPage} = Astro.props;
 ---
 <style>
   a {
-    color: royalblue;
+    color: var(--blue);
     text-decoration: none;
   }
 </style>
-
-<b><a class={clss} href={href}>{text}</a></b>
+<b><a target={newPage ? '_blank' : ''} href={href}>{text}</a></b>

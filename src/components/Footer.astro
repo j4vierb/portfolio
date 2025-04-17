@@ -1,11 +1,12 @@
 ---
-
+import Link from "./Link.astro"
 ---
 
 <style>
   footer {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
   }
 
@@ -15,5 +16,5 @@
 </style>
 
 <footer>
-  <p>Made with 💙</p>
+  <p>Toda esta página fue hecha con <Link href="https://astro.build/" text="Astro" newPage={true}/>.</p>
 </footer>

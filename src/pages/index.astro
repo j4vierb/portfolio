@@ -1,11 +1,134 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greating';
+import { Image } from "astro:assets";
 
-const pageTitle = 'Home';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import profilePicture from "../../public/photo.PNG";
+import Link from "../components/Link.astro";
+
+const pageTitle = "Home";
 ---
 
+<style>
+  h2 {
+    font-size: 2.1em;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 0;
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .welcome-text h2 {
+    line-height: 1.1;
+    font-size: 3.2em;
+    margin: 0;
+  }
+
+  .picture-section {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-picture {
+    width: auto;
+    height: 230px;
+    border-radius: 20px;
+  }
+</style>
 <BaseLayout pageTitle={pageTitle}>
-  <p>SD based on Colombia.</p>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <section class="hero-section">
+    <div class="welcome-text">
+      <h2 id="welcome">Hey, ¡bienvenid@ a mi portafolio!</h2>
+      <p>
+        Mi nombre es Javier, soy estudiante de último año de ingenieria de
+        sistemas. Actualmente me especializo en el desarrollo FullStack, mas
+        orientado hacía el BackEnd, además tengo conocimientos sobre aprendizaje
+        automatico (ML). En estos momentos me encuentro buscando trabajo, si te
+        gusta mi perfil no dudes en <Link href="#contact" text="contactarme" />.
+      </p>
+    </div>
+    <div class="picture-section">
+      <Image
+        src={profilePicture}
+        alt="profile-picture"
+        class="profile-picture"
+      />
+    </div>
+  </section>
+
+<!--   <h2 id="projects">Proyectos</h2>
+  <section>
+    <p>Algunos de los proyectos en los que he participado son los siguientes.</p>
+    <ul>
+      <li>Proyecto 1</li>
+      <li>Proyecto 2</li>
+      <li>Proyecto 3</li>
+      <li>Proyecto 4</li>
+      <li>Proyecto 5</li>
+    </ul>
+  </section> -->
+
+  <h2 id="about-me">Sobre mí</h2>
+  <section>
+    <p>
+      Tengo conocimiento en JavaScript, TypeScript y librerias de interfaz de
+      usuario como React. También cuento con conocimiento en Python, bases de
+      datos relacionales y no relacionales, para ser precisos he trabajado con
+      Django, MySQL y MongoDB. He ganado esta experiencia gracias a proyectos
+      que he desarrollado por mi propia cuenta o con personas de mi misma carrera.
+    </p>
+    <p>
+      Además de programar, me gusta bastante aprender sobre desarrollo, probar
+      nuevas tecnologias y patrones.
+    </p>
+
+    <h3>Tecnologias</h3>
+    <ul>
+      <li><p>FrontEnd: React, Tailwind, CSS</p></li>
+      <li><p>BackEnd: Node.js, Express, Django</p></li>
+      <li><p>Bases de datos: MySQL, MongoDB</p></li>
+      <li><p>Otros: Git, Docker, Figma, Postman, Ubuntu</p></li>
+    </ul>
+
+    <h3>Intereses actuales</h3>
+    <ul>
+      <li><p>Desarrollo web fullstack</p></li>
+      <li><p>Arquitectura de software y patrones de arquitectura</p></li>
+      <li><p>Aprendizaje automatico</p></li>
+      <li><p>Aprendizaje profundo y redes neuronales</p></li>
+      <li><p>Computación cuantica</p></li>
+    </ul>
+  </section>
+
+<!--   <h2 id="contact">Contacto</h2>
+  <section>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section> -->
 </BaseLayout>

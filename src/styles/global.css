@@ -1,31 +1,37 @@
-html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
-}
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
 
-body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  min-height: 100vh;
-  padding: 1rem;
-  line-height: 1.5;
+:root {
+  --bg: #11111b;
+  --default-color: #ededed;
+  --peach: #fab387;
+  --teal: #94e2d5;
+  --blue: #89b4fa;
+  --yellow: #f9e2af;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+html {
+  background-color: var(--bg);
+  font-family: system-ui, 'Open Sans', sans-serif;
+  color: var(--default-color);
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100ch;
+  min-height: 100vh;
+  padding: 2rem 2rem 0 2rem;
+  line-height: 1.5;
 }
 
 /**
   * Navbar
   */
 
-/* Hamburger menu */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -87,23 +93,10 @@ h1 {
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
-    color: #000;
+    padding: 0 10px;
   }
 
   .hamburger {
     display: none;
   }
-}
-
-/**
-  * Dark theme
-  */
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
 }
