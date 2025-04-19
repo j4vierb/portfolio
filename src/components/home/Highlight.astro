@@ -1,0 +1,15 @@
+---
+const { text } = Astro.props;
+---
+
+<style>
+.highlight-text {
+  background: linear-gradient(90deg, var(--blue) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-clip: text;
+}
+</style>
+<span class="highlight-text">{text}</span>

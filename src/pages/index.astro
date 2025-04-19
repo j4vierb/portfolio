@@ -2,19 +2,51 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import profilePicture from "../../public/photo.svg";
 import Link from "../components/Link.astro";
+import Highlight from "../components/home/Highlight.astro";
 
 const pageTitle = "Home";
 ---
 
 <style>
-  h2 {
-    font-size: 2.1em;
-    margin: 0;
-    font-weight: 600;
-  }
+h2 {
+  font-size: 2.1em;
+  margin: 0;
+  font-weight: 600;
+}
 
-  p {
-    font-size: 1.1em;
+p {
+  font-size: 1.1em;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-text h2 {
+  line-height: 1.1;
+  font-size: 3.2em;
+  margin: 0;
+}
+
+.picture-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.profile-picture {
+  width: auto;
+  height: 230px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 636px) {
+  .picture-section {
+    margin: 20px;
+    padding: 10px;
   }
 
   .hero-section {
@@ -22,32 +54,7 @@ const pageTitle = "Home";
     grid-template-columns: 2fr 1fr;
     padding: 20px 0;
   }
-
-  .welcome-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .welcome-text h2 {
-    line-height: 1.1;
-    font-size: 3.2em;
-    margin: 0;
-  }
-
-  .picture-section {
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .profile-picture {
-    width: auto;
-    height: 230px;
-    border-radius: 20px;
-  }
+}
 </style>
 <BaseLayout pageTitle={pageTitle}>
   <section class="hero-section">
@@ -60,7 +67,7 @@ const pageTitle = "Home";
         automatico (ML). En estos momentos me encuentro buscando trabajo, si te
         gusta mi perfil no dudes en <Link href="#contact" text="contactarme" />.
       </p>
-    </div>
+    </div>  
     <div class="picture-section">
       <img
         src={profilePicture.src}
