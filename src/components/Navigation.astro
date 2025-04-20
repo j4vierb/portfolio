@@ -2,12 +2,28 @@
 
 ---
 
-
 <style>
 .nav-links a {
   color: var(--teal);
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #fff;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  transform: scaleX(0);
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
 }
 </style>
 
