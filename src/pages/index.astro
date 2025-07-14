@@ -8,49 +8,9 @@ const pageTitle = "Home";
 ---
 
 <style>
-h2 {
-  font-size: 2.1em;
-  margin: 0;
-  font-weight: 900;
-}
-
-.welcome-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.welcome-text h2 {
-  line-height: 1.1;
-  margin: 0;
-}
-
-.picture-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 20px 0;
-}
-
-.profile-picture {
-  width: auto;
-  height: 230px;
-  border-radius: 20px;
-}
-
-@media screen and (min-width: 636px) {
-  .picture-section {
-    margin: 20px;
-    padding: 10px;
-  }
-
-  .hero-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 20px 0;
-  }
-}
+  @import url('./index.css');
 </style>
+
 <BaseLayout pageTitle={pageTitle}>
   <section class="hero-section">
     <div class="welcome-text">
@@ -72,7 +32,15 @@ h2 {
     </div>
   </section>
 
-<!--   <h2 id="projects">Proyectos</h2>
+  <h2 id="experience">Experiencia</h2>
+  <section>
+    <ul>
+      <li>Monitor introducción a la programación (2024)</li>
+      <li>Desarrollador de software (2025-actual)</li>
+    </ul>
+  </section>
+
+<h2 id="projects">Proyectos</h2>
   <section>
     <p>Algunos de los proyectos en los que he participado son los siguientes.</p>
     <ul>
@@ -82,7 +50,7 @@ h2 {
       <li>Proyecto 4</li>
       <li>Proyecto 5</li>
     </ul>
-  </section> -->
+  </section>
 
   <h2 id="about-me">Sobre mí</h2>
   <section>
@@ -115,20 +83,4 @@ h2 {
       <li><p>Computación cuantica</p></li>
     </ul>
   </section>
-
-<!--   <h2 id="contact">Contacto</h2>
-  <section>
-    <form>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section> -->
 </BaseLayout>

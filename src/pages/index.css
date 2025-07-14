@@ -1,0 +1,42 @@
+h2 {
+  font-size: 2.1em;
+  margin: 0;
+  font-weight: 900;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-text h2 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+.picture-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.profile-picture {
+  width: auto;
+  height: 230px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 636px) {
+  .picture-section {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 0;
+  }
+}
