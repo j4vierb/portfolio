@@ -3,12 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import profilePicture from "../../public/photo.svg";
 import Link from "../components/Link.astro";
 import Highlight from "../components/home/Highlight.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Book from "../components/icons/Book.astro";
 
-const pageTitle = "Home";
+const pageTitle = "Portafolio";
 ---
 
 <style>
-  @import url('./index.css');
+  @import url("./index.css");
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
@@ -16,13 +20,18 @@ const pageTitle = "Home";
     <div class="welcome-text">
       <h2 id="welcome">Hey, ¡bienvenid@ a mi portafolio!</h2>
       <p>
-        Mi nombre es Javier, soy estudiante de último año de ingenieria de
-        sistemas. Actualmente me especializo en el desarrollo FullStack, mas
-        orientado hacía el BackEnd, además tengo conocimientos sobre aprendizaje
-        automatico (ML). En estos momentos me encuentro buscando trabajo, si te
-        gusta mi perfil no dudes en <Link href="#contact" text="contactarme" />.
+        Mi nombre es Javier, soy estudiante de último año de Ingeniería de
+        Sistemas y Computación en la Universidad de los Andes. Me especializo en
+        desarrollo BackEnd y cuento con experiencia en aplicaciones nativas en
+        la nube y tecnologías web modernas.<br />
+        <br />
+        También cuento con sólidos conocimientos en aprendizaje automático (ML),
+        aprendizaje profundo (DL), estadística, analítica de datos y arquitectura
+        de software, con experiencia práctica en el despliegue de proyectos en AWS
+        y Google Cloud. Me apasiona crear soluciones eficientes, escalables y trabajar
+        en equipo para lograr grandes resultados.
       </p>
-    </div>  
+    </div>
     <div class="picture-section">
       <img
         src={profilePicture.src}
@@ -32,55 +41,56 @@ const pageTitle = "Home";
     </div>
   </section>
 
-  <h2 id="experience">Experiencia</h2>
+  <h2 id="experience"><Briefcase class="size-8" /> Experiencia</h2>
   <section>
-    <ul>
-      <li>Monitor introducción a la programación (2024)</li>
-      <li>Desarrollador de software (2025-actual)</li>
-    </ul>
+    <div class="experience-timeline">
+      <div class="experience-item">
+        <h3>Experiencia 1</h3>
+        <div class="company">Lugar</div>
+        <div class="date">Fecha</div>
+        <div class="description">
+          Descripción.
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <h3>Experiencia 2</h3>
+        <div class="company">Lugar</div>
+        <div class="date">Fecha</div>
+        <div class="description">
+          Descripción.
+        </div>
+      </div>
+    </div>
   </section>
 
-<h2 id="projects">Proyectos</h2>
+  <h2 id="projects"><CodeIcon class="size-7" /> Proyectos</h2>
   <section>
-    <p>Algunos de los proyectos en los que he participado son los siguientes.</p>
-    <ul>
-      <li>Proyecto 1</li>
-      <li>Proyecto 2</li>
-      <li>Proyecto 3</li>
-      <li>Proyecto 4</li>
-      <li>Proyecto 5</li>
-    </ul>
+    <p>
+      Algunos de los proyectos en los que he participado son los siguientes.
+    </p>
   </section>
 
-  <h2 id="about-me">Sobre mí</h2>
+  <h2 id="projects"><Book class="size-7" /> Cursos relevantes</h2>
+  <section>
+    <p>
+      Algunos de los proyectos en los que he participado son los siguientes.
+    </p>
+  </section>
+
+  <h2 id="about-me"><ProfileCheck class="size-8" /> Sobre mí</h2>
   <section>
     <p>
       Tengo conocimiento en JavaScript, TypeScript y librerias de interfaz de
       usuario como React. También cuento con conocimiento en Python, bases de
       datos relacionales y no relacionales, para ser precisos he trabajado con
       Django, MySQL y MongoDB. He ganado esta experiencia gracias a proyectos
-      que he desarrollado por mi propia cuenta o con personas de mi misma carrera.
+      que he desarrollado por mi propia cuenta o con personas de mi misma
+      carrera.
     </p>
     <p>
       Además de programar, me gusta bastante aprender sobre desarrollo, probar
       nuevas tecnologias y patrones.
     </p>
-
-    <h3>Tecnologias</h3>
-    <ul>
-      <li><p>FrontEnd: React, Tailwind, CSS</p></li>
-      <li><p>BackEnd: Node.js, Express, Django</p></li>
-      <li><p>Bases de datos: MySQL, MongoDB</p></li>
-      <li><p>Otros: Git, Docker, Figma, Postman, Ubuntu</p></li>
-    </ul>
-
-    <h3>Intereses actuales</h3>
-    <ul>
-      <li><p>Desarrollo web fullstack</p></li>
-      <li><p>Arquitectura de software y patrones de arquitectura</p></li>
-      <li><p>Aprendizaje automatico</p></li>
-      <li><p>Aprendizaje profundo y redes neuronales</p></li>
-      <li><p>Computación cuantica</p></li>
-    </ul>
   </section>
 </BaseLayout>

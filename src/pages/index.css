@@ -28,6 +28,67 @@ h2 {
   border-radius: 20px;
 }
 
+/* Experience Timeline Styles */
+.experience-timeline {
+  position: relative;
+  padding-left: 50px;
+  margin: 20px 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #fab387, #fab387);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  
+  border-radius: 10px;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 25px;
+  width: 12px;
+  height: 12px;
+  background: #fbbf24;
+  border-radius: 50%;
+  border: 3px solid #1f2937;
+}
+
+.experience-item h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.experience-item .company {
+  color: #e5e7eb;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.experience-item .date {
+  color: #9ca3af;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.experience-item .description {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
 @media screen and (min-width: 636px) {
   .picture-section {
     margin: 20px;
