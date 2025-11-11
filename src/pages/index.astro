@@ -13,12 +13,20 @@ const pageTitle = "Portafolio";
 
 const courses = [
   {
-    title: "Desarrollo de software en la nube",
-    description: "Construcción y despliegue en AWS de una API REST desarrollada en FastAPI para procesar videos de manera asíncrona utilizando servicios como Elastic Compute Cloud (EC2), Elastic Load Balancer (ELB), Relation Database Service (RDS) y Simple Storage Service (S3)."
+    title: "Inteligencia de negocios",
+    description: "Desarrollo de distintos modelos de machine learning para tareas de clasificación, regresión y clustering, utilizando Python y Scikit-Learn. Adicionalmente se realizó un proyecto de procesamiento del lenguaje natural (NLP) para la clasificación de noticias falsas utilizando modelos como Naive Bayes, Random Forest y XGBoost."
+  },
+  {
+    title: "Probabilidad y estadística II",
+    description: "Desarrollo de competencias en estadística descriptiva mediante análisis de varianza (ANOVA), modelos de regresión lineal y lógistica. Así mismo se desarrollaron pruebas de hipótesis, estimación de parámetros, intervalos de confianza para los estimadores y revisión de supuestos."
   },
   {
     title: "Construcción de aplicaciones basadas en LLMs",
     description: "Desarrollo de una aplicación que integra un modelo de lenguaje grande (LLM) que hace uso de un sistema de recuperación de información (RAG) para recuperar contexto de notas escritas en Obsidian."
+  },
+  {
+    title: "Fundamentos del machine learning",
+    description: "Desarrollo de las competencias basicas en aprendizaje automático: formulación de problemas de optimización, algoritmos de optimización iterativos, regresión lineal, validación cruzada, regularización, modelos de clasificación y fundamentos de redes neuronales."
   },
   {
     title: "Principios y aplicaciones del Deep Learning",
@@ -28,24 +36,14 @@ const courses = [
     title: "Desarrollo de aplicaciones nativas en la nube",
     description: "Desarrollo de una aplicación basada en microservicios utilizando arquitectura hexagonal, contenedores Docker, orquestación con Kubernetes y despliegue en AWS."
   },
-
-  {
-    title: "Inteligencia de negocios",
-    description: "Desarrollo de distintos modelos de machine learning para tareas de clasificación, regresión y clustering, utilizando Python y Scikit-Learn. Adicionalmente se realizó un proyecto de procesamiento del lenguaje natural (NLP) para la clasificación de noticias falsas utilizando modelos como Naive Bayes, Random Forest y XGBoost."
-  },
-  {
-    title: "Probabilidad y estadística II",
-    description: "Desarrollo de competencias en estadística descriptiva mediante análisis de varianza (ANOVA), modelos de regresión lineal y lógistica. Así mismo se desarrollaron pruebas de hipótesis, estimación de parámetros, intervalos de confianza para los estimadores y revisión de supuestos."
-  },
   {
     title: "Arquitectura y diseño de software",
     description: "Diseño y despliegue en Google Cloud Platform de una aplicación web en Django para manejar la matricula de colegios asegurando atributos de calidad como escalabilidad y disponibilidad, utilizando tácticas de arquitectura."
   },
   {
-    title: "Fundamentos del machine learning",
-    description: "Desarrollo de las competencias basicas en aprendizaje automático: formulación de problemas de optimización, algoritmos de optimización iterativos, regresión lineal, validación cruzada, regularización, modelos de clasificación y fundamentos de redes neuronales."
+    title: "Desarrollo de software en la nube",
+    description: "Construcción y despliegue en AWS de una API REST desarrollada en FastAPI para procesar videos de manera asíncrona utilizando servicios como Elastic Compute Cloud (EC2), Elastic Load Balancer (ELB), Relation Database Service (RDS) y Simple Storage Service (S3)."
   },
-
 ]
 
 const discartedCourses = [
@@ -74,15 +72,14 @@ const discartedCourses = [
       <h2 id="welcome">Hey 👋, ¡Bienvenido a mi portafolio!</h2>
       <p>
         Mi nombre es Javier, soy estudiante de último año de Ingeniería de
-        Sistemas y Computación en la Universidad de los Andes. Me especializo en
-        desarrollo BackEnd y cuento con experiencia en aplicaciones nativas en
-        la nube y tecnologías web modernas.<br />
+        Sistemas y Computación en la Universidad de los Andes. Me apasiona aprender
+        y crear soluciones eficientes, escalables y trabajar en equipo para lograr grandes
+        resultados.
         <br />
         También cuento con sólidos conocimientos en aprendizaje automático (ML),
-        aprendizaje profundo (DL), estadística, analítica de datos y arquitectura
+        aprendizaje profundo (DL), nube, estadística, analítica de datos y arquitectura
         de software, con experiencia práctica en el despliegue de proyectos en AWS
-        y Google Cloud. Me apasiona crear soluciones eficientes, escalables y trabajar
-        en equipo para lograr grandes resultados.
+        y Google Cloud.
       </p>
     </div>
     <div class="picture-section">
@@ -147,8 +144,8 @@ const discartedCourses = [
       carrera.
     </p>
     <!-- <p>
-      Además de programar, me gusta bastante aprender sobre desarrollo, probar
-      nuevas tecnologias y patrones.
+      Además de programar me gusta bastante aprender sobre distintos temas,
+      en particular los relacionados con inteligencia artificial. 
     </p> -->
   </section>
 </BaseLayout>
